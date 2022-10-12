@@ -1,74 +1,37 @@
-import React from "react";
 import logo from "../assets/logo.svg";
-import cart from "../assets/cart.svg";
+import CartWidget from "./CartWidget";
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function Navbar() {
+function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg ">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          <img alt="Logo" src={logo} width="100px" />
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Inicio
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Productos
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Actionxcvxvxcvcxvcxv
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Nosotros
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Contacto
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                <img alt="carrito" src={cart} width="30px"/>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <Navbar expand="lg">
+      <Container>
+        <Navbar.Brand href="#home">
+        <img alt="Logo" src={logo} width="100px" />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Inicio</Nav.Link>
+            <Nav.Link href="#link">Nosotros</Nav.Link>
+            <NavDropdown title="Productos" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Cereales</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Refrigerados
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Celiacos</NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#home">
+              <CartWidget/>
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default Navbar;
+export default NavBar;
