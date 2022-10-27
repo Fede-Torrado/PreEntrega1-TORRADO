@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-expand-lg {
+  background-color: #0d6efd;
+  color: white;
+}
+.navbar-expand-lg div .collapse ul li a {
+  color: aliceblue;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  width: 90%;
+  margin: auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.container .productContainer {
+  width: 300px;
+  padding: 15px;
+  border: solid 1px rgb(182, 182, 182);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.container .productContainer .imgs {
+  width: 100%;
+  text-align: center;
+}
+.container .productContainer .buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.counter {
+  background-color: rgb(251, 251, 251);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px rgb(168, 168, 168);
+  border-radius: 7px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+.counter Button {
+  width: 40px;
+  font-weight: bold;
+}
+.counter .counterNumber {
+  font-size: 13pt;
+  color: rgb(101, 101, 101);
+}
+
+.category {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: rgb(231, 231, 231);
+  padding: 15px;
+}
+.category a {
+  text-decoration: none;
+  color: rgb(107, 107, 107);
+}
+.category div {
+  font-size: 16pt;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,15 @@
+.category{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color:rgb(231, 231, 231);
+    padding: 15px;
+    a {
+        text-decoration: none;
+        color: rgb(107, 107, 107);
+    }
+    div {
+        font-size:16pt;
+    }
+
+}
